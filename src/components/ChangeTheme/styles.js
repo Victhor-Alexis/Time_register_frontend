@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 49%;
+    width: 49.765%;
     height: 21vw;
-    margin-right: 1%;
 `;
 
 export const Circle = styled.div`
