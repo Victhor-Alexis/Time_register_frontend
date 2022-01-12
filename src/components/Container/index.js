@@ -2,6 +2,7 @@ import React from 'react'
 import AddCard from '../AddCard'
 import CardSubject from '../CardSubject'
 import ChangeTheme from '../ChangeTheme'
+import FormCard from '../FormCard'
 import { Holder } from './styles'
 
 const Container = () => {
@@ -24,6 +25,7 @@ const Container = () => {
             <CardSubject/>
             <AddCard/>
             <ChangeTheme/>
+            <FormCard/>
         </Holder>
     )
 }
