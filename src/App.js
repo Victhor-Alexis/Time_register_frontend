@@ -1,9 +1,12 @@
 import Container from "./components/Container";
+import { DynimicityProvider } from "./context/useDynimicityContext";
 import './global.css'
 
 function App() {
   return (
-    <Container/>
+    <DynimicityProvider>
+       <Container/>
+    </DynimicityProvider>
   );
 }
 
