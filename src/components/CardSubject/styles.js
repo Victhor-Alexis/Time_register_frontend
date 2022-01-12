@@ -38,10 +38,15 @@ export const Daybox = styled.div`
     color: white;
     text-align: center;
     position: relative;
+    cursor: pointer;
 
     p {
         position: relative;
         top: 45%;
         transform: translateY(-50%);
+    }
+
+    InfoDate {
+        display: none;
     }
 `;

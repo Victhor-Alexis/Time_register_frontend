@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import InfoDate from '../InfoDate'
 import Timebar from '../Timebar'
 import { Container, Daybox } from './styles'
 
 const CardSubject = () => {
+
+    const [dpInfoDate, setDpInfoDate] = useState(["none", "none", 
+    "none", "none", "none", "none", "none"])
+
     return (
         <Container>
             <Timebar/>
@@ -15,26 +19,53 @@ const CardSubject = () => {
             </div>
 
             <div className="infoDays">
-                <Daybox>
+                <Daybox onMouseEnter={() => setDpInfoDate(["block", "none", 
+                        "none", "none", "none", "none", "none"])} 
+                        onMouseLeave={() => setDpInfoDate(["none", "none", 
+                        "none", "none", "none", "none", "none"])}>
                     <p>D</p>
-                    <InfoDate number={1}/>
+                    <InfoDate display={dpInfoDate[0]} number={1} />
                 </Daybox>
-                <Daybox>
+                <Daybox onMouseEnter={() => setDpInfoDate(["none", "block", 
+                        "none", "none", "none", "none", "none"])} 
+                        onMouseLeave={() => setDpInfoDate(["none", "none", 
+                        "none", "none", "none", "none", "none"])}>
                     <p>S</p>
+                    <InfoDate display={dpInfoDate[1]} number={1}/>
                 </Daybox>
-                <Daybox>
+                <Daybox onMouseEnter={() => setDpInfoDate(["none", "none", 
+                        "block", "none", "none", "none", "none"])} 
+                        onMouseLeave={() => setDpInfoDate(["none", "none", 
+                        "none", "none", "none", "none", "none"])}>
                     <p>T</p>
+                    <InfoDate display={dpInfoDate[2]} number={1}/>
                 </Daybox>
-                <Daybox>
+                <Daybox onMouseEnter={() => setDpInfoDate(["none", "none", 
+                        "none", "block", "none", "none", "none"])} 
+                        onMouseLeave={() => setDpInfoDate(["none", "none", 
+                        "none", "none", "none", "none", "none"])}>
                     <p>Q</p>
+                    <InfoDate display={dpInfoDate[3]} number={1}/>
                 </Daybox>
-                <Daybox>
+                <Daybox onMouseEnter={() => setDpInfoDate(["none", "none", 
+                        "none", "none", "block", "none", "none"])} 
+                        onMouseLeave={() => setDpInfoDate(["none", "none", 
+                        "none", "none", "none", "none", "none"])}>
                     <p>Q</p>
+                    <InfoDate display={dpInfoDate[4]}/>
                 </Daybox>
-                <Daybox>
+                <Daybox onMouseEnter={() => setDpInfoDate(["none", "none", 
+                        "none", "none", "none", "block", "none"])} 
+                        onMouseLeave={() => setDpInfoDate(["none", "none", 
+                        "none", "none", "none", "none", "none"])}>
                     <p>S</p>
+                    <InfoDate display={dpInfoDate[5]}/>
                 </Daybox>
-                <Daybox>
+                <Daybox onMouseEnter={() => setDpInfoDate(["none", "none", 
+                        "none", "none", "none", "none", "block"])} 
+                        onMouseLeave={() => setDpInfoDate(["none", "none", 
+                        "none", "none", "none", "none", "none"])}>
+                    <InfoDate display={dpInfoDate[6]}/>
                     <p>S</p>
                 </Daybox>
             </div>
