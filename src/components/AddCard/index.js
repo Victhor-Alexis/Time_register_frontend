@@ -1,9 +1,13 @@
 import React from 'react'
+import { useDynimicityContext } from '../../context/useDynimicityContext'
 import { Container } from './styles'
 
 const AddCard = () => {
+
+    const { changeFormDisplay } = useDynimicityContext();
+
     return (
-        <Container>
+        <Container onClick={() => changeFormDisplay(true)}>
             <div className="cross">
                 <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect y="47" width="120" height="25" fill="white"/>
