@@ -9,4 +9,15 @@ export const Container = styled.div`
     display: ${ props => props.display === "block" ? "block" : "none" };
     opacity: ${ props => props.opacity === "1" ? "1" : "0" };
     transition: 0.4s;
+
+    .options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1% 2%;
+
+        .close, .exclude, .confirm {
+            cursor: pointer;
+        }
+    }
 `;
